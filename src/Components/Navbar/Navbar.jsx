@@ -3,12 +3,19 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Services/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Menu, MenuItem } from '@mui/material';
+
 
 const Navbar = () => {
-
+    const [myDropDown, setMyDropDown] = useState(null);
     const {user, logOut} = useContext(AuthContext);
 
-    
+    const handleClick = (event) => {
+      setMyDropDown(event.currentTarget);
+    };
+    const handleClose = () => {
+      setMyDropDown(null);
+    };
 
 const handleSignOut = () => {
   logOut()
@@ -67,23 +74,69 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
  
 
 <div className="flex justify-center items-center mx-1 max-md:hidden">
+
+{/* my referencer */}
+ {/* <img className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL}/> */} 
+
+ {/* <Avatar alt="Profile" src={user.photoURL} onClick={handleClick} /> */}
+
 {
  user ? 
- <img className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL} alt="" />
- 
+<img onClick={handleClick}  className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL}/>
     :
- <img className=" bg-white rounded-full w-[6vh] mx-1" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="" />
+ ""
 
  }
 
+{/* {
+ user ? 
+<img onClick={handleClick}  className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL}/>
+    :
+ <img className=" bg-white rounded-full w-[6vh] mx-1" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="" />
+
+ } */}
+
+
+
+{/* 
 {
  user ? 
  <h2 className="text-black text-xs">{user.displayName}</h2>
     :
     <h2 className="text-black text-xs">No User</h2>
 
- }
+ } */}
 
+<Menu
+        anchorEl={myDropDown}
+        open={Boolean(myDropDown)}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        {
+ user ? 
+ <h2 className="text-black text-sm text-center">{user.displayName}</h2>
+    :
+    <h2 className="text-black text-sm text-center">No User</h2>
+
+ } 
+        <MenuItem onClick={handleClose}>Dashboard</MenuItem>
+        <MenuItem onClick={handleClose}>
+        {
+ user ? 
+<Link onClick={handleSignOut} to="/" className="hidden md:block bg-orange-600 text-white py-1 px-3 rounded-lg mt-1 hover:bg-orange-700">Log Out</Link>
+    :
+ ""
+ }
+        </MenuItem>
+      </Menu>
 
 
 
@@ -92,9 +145,16 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
 
 
          
-          {
+          {/* {
  user ? 
 <Link onClick={handleSignOut} to="/" className="hidden md:block bg-orange-600 text-white py-1 px-3 rounded-lg mt-1 hover:bg-orange-700">Log Out</Link>
+    :
+ <Link to="/login" className="hidden md:block bg-orange-600 text-white py-1 px-3 rounded-lg mt-1 hover:bg-orange-700">Login</Link>
+
+ } */}
+           {
+ user ? 
+""
     :
  <Link to="/login" className="hidden md:block bg-orange-600 text-white py-1 px-3 rounded-lg mt-1 hover:bg-orange-700">Login</Link>
 
