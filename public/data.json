@@ -1,0 +1,64 @@
+[
+    {
+      
+      "id": 1,
+      "brand": "Apple",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/apple.jpg",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/wedding.jpg",
+      "price": 1000,
+      "title": "Wedding",
+      "shortDescription": "Elegant wedding packages, stunning venues, expert ...",
+      "description": "Celebrate your special day with our elegant wedding packages. We offer exquisite venues, expert planning, and stunning decor. Make your dream wedding a reality. Our team of experienced wedding planners will assist you every step of the way, from selecting the perfect venue to designing the most beautiful floral arrangements. Your wedding day should be filled with joy, love, and unforgettable moments, and we are here to ensure that it is. Whether you envision a grand ballroom affair or an intimate garden wedding, we have the expertise and resources to bring your vision to life. Let us take care of the details so you can focus on what matters most – each other."
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/samsung.png",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/happybd-small.jpg",
+      "price": 500,
+      "title": "Birthday parties",
+      "shortDescription": "Ultimate birthday bash with themed decorations and ...",
+      "description": "Host the ultimate birthday bash with our party packages. From themed decorations to fun activities, we make every birthday unforgettable. Birthdays are a time for celebration, and we believe that every birthday should be a memorable and joyful occasion. Our party packages are designed to take the stress out of planning so you can enjoy the festivities with your loved ones. Choose from a variety of themes and customize every detail to create a birthday party that reflects your unique style and personality. Whether it's a milestone birthday or a surprise party for a loved one, we are here to make it extraordinary. Let's make your next birthday party one for the books!"
+    },
+    {
+      "id": 3,
+      "brand": "Sony",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/sony.jpg",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/Aniversary-big.jpg",
+      "price": 800,
+      "title": "Anniversaries",
+      "shortDescription": "Celebrate love and togetherness with personalized anni...",
+      "description": "Celebrate years of love and togetherness with our anniversary services. Our romantic venues and personalized touches create memorable moments. Anniversaries are a time to reflect on the journey of love you've shared together. We understand the importance of celebrating these special milestones, and our anniversary services are designed to create magical moments that you'll cherish forever. Whether you prefer an intimate candlelit dinner or a grand anniversary party, we will tailor every aspect to your desires. Our experienced team will work closely with you to ensure that your anniversary celebration is filled with love, romance, and unforgettable memories."
+    },
+    {
+      "id": 4,
+      "brand": "Lenovo",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/lenovo.jpg",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/Engagement-small.jpg",
+      "price": 750,
+      "title": "Engagement parties",
+      "shortDescription": "Spectacular engagement parties to announce your ...",
+      "description": "Begin your journey to forever with a spectacular engagement party. We provide everything you need to announce your love to the world. An engagement is a beautiful moment that marks the beginning of a lifelong journey together. It's a time to celebrate love, commitment, and the promise of forever. Our engagement party services are designed to help you share this joyous occasion with family and friends in style. From elegant venues to exquisite catering and décor, we offer everything you need to make your engagement party unforgettable. Let's create a magical celebration that sets the stage for your happily ever after."
+    },
+    {
+      "id": 5,
+      "brand": "Google",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/google.jpg",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/Retirement-party-small-big.jpg",
+      "price": 900,
+      "title": "Retirements",
+      "shortDescription": "Celebrate retirement with relaxation and joy ...",
+      "description": "Embrace the golden years with a retirement celebration. Our retirement packages offer relaxation and joy as you bid farewell to work life. Retirement marks the beginning of a new and exciting chapter in life. It's a time to savor the fruits of your labor and enjoy the well-deserved rest. Our retirement celebration packages are designed to help you make the most of this special transition. Whether you dream of a tropical getaway or a cozy retirement party at home, we can turn your retirement vision into reality. Let us handle the planning and logistics while you focus on embracing the golden years with open arms."
+    },
+    {
+      "id": 6,
+      "brand": "Intel",
+      "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/Intel.jpg",
+      "picture": "https://ebook.projectbd.com/wp-content/uploads/2023/10/baby-shower-big.jpg",
+      "price": 600,
+      "title": "Baby shower",
+      "shortDescription": "Charming baby showers to welcome your bundle of ...",
+      "description": "Welcome the newest member of your family with a charming baby shower. We create beautiful settings for your bundle of joy's arrival. The anticipation of a new addition to the family is a time of joy and excitement. A baby shower is the perfect way to celebrate and welcome the newest member of your family. Our baby shower services are designed to make this occasion as special as can be. From adorable baby-themed décor to delicious treats and games, we'll create a charming atmosphere for your baby shower. Let's make this day unforgettable and filled with love as you prepare to welcome your bundle of joy into the world."
+    }
+  ]
+  
