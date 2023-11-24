@@ -62,12 +62,14 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
           <NavLink to="/" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Home</NavLink>
+          <NavLink to="/" className={({isActive, isPending}) =>
+isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Products</NavLink>
 
-            <NavLink to="/addProduct" className={({isActive, isPending}) =>
+            {/* <NavLink to="/addProduct" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Add Product</NavLink>
                         
             <NavLink to="/myCart" className={({isActive, isPending}) =>
-isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>My Cart</NavLink>
+isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>My Cart</NavLink> */}
 
           </div>
 
@@ -161,7 +163,7 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
  }
 
          
-  <div className="md:hidden">
+  <div className="md:hidden mr-3">
     <button
       onClick={toggleMobileMenu}
       className="text-black focus:outline-none"
@@ -180,16 +182,18 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
 
 
         <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="max-md:mx-3">
+
         <NavLink to="/" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Home</NavLink>
 <br />
-            <NavLink to="/addProduct" className={({isActive, isPending}) =>
-isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Add Product</NavLink>
+            <NavLink to="/" className={({isActive, isPending}) =>
+isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Products</NavLink>
    <br />                     
-            <NavLink to="/myCart" className={({isActive, isPending}) =>
+            {/* <NavLink to="/myCart" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>My Cart</NavLink>
 
-<br />
+<br /> */}
 
 <div className="flex my-2">
 {
@@ -197,32 +201,55 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
  <img className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL} alt="" />
  
     :
- <img className=" bg-white rounded-full w-[6vh] mx-1" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="" />
+ ""
 
  }
+
+{/* {
+ user ? 
+ <img className=" bg-white rounded-full w-[6vh] mx-1" src={user.photoURL} alt="" />
+ 
+    :
+ <img className=" bg-white rounded-full w-[6vh] mx-1" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" />
+
+ } */}
+
 
 {
  user ? 
  <h2 className="text-black text-xs">{user.displayName}</h2>
     :
-    <h2 className="text-black text-xs">No User</h2>
+    ""
 
  }
+{/* {
+ user ? 
+ <h2 className="text-black text-xs">{user.displayName}</h2>
+    :
+    <h2 className="text-black text-xs">No User</h2>
 
+ } */}
 
 
 </div>
 
-
-
+{
+  user?
+  <button onClick={toggleMobileMenu}><h2 className="pb-2">Dashboard</h2></button>
+  : ""
+}
+<br />
           {
  user ? 
 <Link onClick={handleSignOut} to="/login" className="bg-black text-white py-1 px-4 rounded-lg mt-2 hover:bg-slate-700">Log Out</Link>
     :
- <Link to="/login" className="bg-black text-white py-1 px-4 rounded-lg mt-2 hover:bg-slate-700">Login</Link>
+ <Link onClick={toggleMobileMenu} to="/login" className="bg-black text-white py-1 px-4 rounded-lg mt-2 hover:bg-slate-700">Login</Link>
 
  }
 
+
+
+        </div>
 
 
         </div>
