@@ -40,3 +40,10 @@
 .search-content button:hover {
   background-color: #bc0208; /* Adjust the button hover background color */
 }
+
+.pagination button{
+    background-color: rgb(83, 83, 83);
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 2px;
+}

@@ -6,6 +6,7 @@ import { AuthContext } from "../Components/Services/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import './Products.css';
+import { useEffect } from "react";
 
 const Products = () => {
   const {user,loading} = useContext(AuthContext);
@@ -14,6 +15,22 @@ const Products = () => {
 const [search,setSearch] = useState('');
 const [searchResults, setSearchResults] = useState([]);
 
+// Total number of products
+const [productCount, setProductCount] = useState([]);
+useEffect(() => {
+    fetch('http://localhost:5000/productsCount')
+    .then(res => res.json())
+    .then(data => setProductCount(data.count))
+}, []);
+const itemsPerPage = 2;
+const numberOfPages = Math.ceil(productCount / itemsPerPage);
+
+const pages = []
+for(let i = 0; i <numberOfPages; i++){
+ pages.push(i)
+}
+console.log(pages);
+// my search bar
 
 const handleSearch = () => {
     const results = products.filter((product) =>
@@ -87,6 +104,12 @@ const handleSearch = () => {
           {/* <div className="mx-auto text-center mt-10">
               <button className="btn btn-outline">See All Products</button></div> */}
           </section>
+<div className="pagination">
+              {
+                pages.map(page => <button key={page}>{page}</button>)
+              }
+</div>
+
       </div>
   );
 };
