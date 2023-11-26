@@ -10,6 +10,8 @@ import Sponser from "./Sponser";
 import Helmet from 'react-helmet';
 import ScrollToTop from "../ScrollToTop";
 import SliderAdsForHome from "./SliderAdsForHome";
+import FeaturedProduct from "../../ProductCategory/FeaturedProduct";
+import TrendingProduct from "../../ProductCategory/TrendingProduct";
 
 
 const Home = () => {
@@ -52,12 +54,18 @@ useEffect(() => {
 
 {/* service card start here */}
 
-<div><h2 className="text-center font-bold text-3xl my-12">Discover the Latest in High-Tech Gadgets and Devices</h2></div>
+<div>
+  <FeaturedProduct></FeaturedProduct>
+</div>
+
+{/* <div><h2 className="text-center font-bold text-3xl my-12">Discover the Latest in High-Tech Gadgets and Devices</h2></div>
             <div  data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="grid grid-cols-2 gap-8 px-16 pb-10 max-md:grid-cols-1 max-md:px-8 overflow-x-hidden">
                 {cards.map((card) => <Cards key={card.id} card={card}></Cards>)}
-            </div>
+            </div> */}
             
-
+            <div>
+  <TrendingProduct></TrendingProduct>
+</div>
 
 {/* <div className="overflow-x-hidden flex justify-between px-6 gap-6 items-center h-[80vh] max-md:flex-col max-md:h-[95vh] max-md:py-10 bg-[url('https://ebook.projectbd.com/wp-content/uploads/2023/10/home-2.jpg')] bg-cover">
 <img data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="w-[40%] rounded-md" src="https://ebook.projectbd.com/wp-content/uploads/2023/10/events-bg.png" alt="" />

@@ -41,9 +41,9 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/productDetails/:id',
+        path: '/techProduct/:id',
         element: <ProtectedRoute> <ProductDetails></ProductDetails></ProtectedRoute>,
-        loader: ({params})=>fetch(`https://ass10server2.vercel.app/product/${params.id}`),
+        loader: ({params})=>fetch(`http://localhost:5000/techProduct/${params.id}`),
         
       },
 

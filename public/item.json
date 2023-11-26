@@ -1,0 +1,225 @@
+[
+    {
+        
+        "productName": "SmartWatch",
+        "image": "https://ebook.projectbd.com/wp-content/uploads/2023/11/smart-watch.jpg",
+        "tags": ["electronics", "gadgets", "tech"],
+        "category": "featured",
+        "type": "Gadget",
+        "timestamp": "2023-11-20T15:00:00Z",
+        "productDetails": "A versatile wearable device that integrates with your smartphone to provide notifications, fitness tracking, and various apps. It allows users to conveniently access information without the need to check their phones.",
+        "OwnerEmail": "mrhasan2k50@gmail.com",
+        "upvote": [
+            {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              },
+              {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              }
+        ],
+        "downvote": {
+          "user": "user2",
+          "email": "user2@example.com",
+          "downvotedOn": "2023-11-23T08:45:00Z"
+        },
+        "productOwner": "John Doe",
+        "reviews": [
+          {
+            "name": "Alice Brown",
+            "comment": "Excellent gadget! Really loved using it.",
+            "rating": 5,
+            "timestamp": "2023-11-20T15:00:00Z"
+          },
+          {
+            "name": "Michael Johnson",
+            "comment": "Not as good as expected.",
+            "rating": 3,
+            "timestamp": "2023-11-21T12:30:00Z"
+          }
+        ],
+      
+        "externalLinks": [
+          {
+            "title": "Manufacturer's Website",
+            "url": "https://manufacturer.com/product-page"
+          },
+          {
+            "title": "Buy Now",
+            "url": "https://onlineshop.com/product"
+          }
+        ]
+      },
+
+
+      { 
+        
+        "productName": "Wireless Earbuds",
+        "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/sony-4.jpg",
+        "tags": ["electronics", "gadgets", "tech"],
+        "category": "featured",
+        "type": "Gadget",
+        "timestamp": "2023-11-20T15:00:00Z",
+        "productDetails": "Compact and wireless earbuds that offer high-quality sound and portability. These earbuds provide a seamless audio experience, allowing users to enjoy music or take calls without the hassle of tangled wires.",
+        "upvote": [
+            {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              }
+        ],
+        "downvote": {
+          "user": "user2",
+          "email": "user2@example.com",
+          "downvotedOn": "2023-11-23T08:45:00Z"
+        },
+        "productOwner": "John Doe",
+        "reviews": [
+          {
+            "name": "Alice Brown",
+            "comment": "Excellent gadget! Really loved using it.",
+            "rating": 5,
+            "timestamp": "2023-11-20T15:00:00Z"
+          },
+          {
+            "name": "Michael Johnson",
+            "comment": "Not as good as expected.",
+            "rating": 3,
+            "timestamp": "2023-11-21T12:30:00Z"
+          }
+        ],
+       
+
+        "externalLinks": [
+          {
+            "title": "Manufacturer's Website",
+            "url": "https://manufacturer.com/product-page"
+          },
+          {
+            "title": "Buy Now",
+            "url": "https://onlineshop.com/product"
+          }
+        ]
+      },
+
+      
+      { 
+        
+        "productName": "Apple AirPods Pro",
+        "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/sony-4.jpg",
+        "tags": ["electronics", "gadgets", "tech"],
+        "category": "trending",
+        "type": "Gadget",
+        "timestamp": "2023-11-19T15:00:00Z",
+        "productDetails": "Apple AirPods Pro is a set of wireless earbuds designed for premium sound quality and active noise cancellation. They offer a customizable fit, adaptive EQ, and transparency mode for ambient sound.",
+        "upvote": [
+            {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              },
+              {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              },
+              {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              },
+              {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              }
+        ],
+        "downvote": {
+          "user": "user2",
+          "email": "user2@example.com",
+          "downvotedOn": "2023-11-23T08:45:00Z"
+        },
+        "productOwner": "John Doe",
+        "reviews": [
+          {
+            "name": "Alice Brown",
+            "comment": "Excellent gadget! Really loved using it.",
+            "rating": 5,
+            "timestamp": "2023-11-20T15:00:00Z"
+          },
+          {
+            "name": "Michael Johnson",
+            "comment": "Not as good as expected.",
+            "rating": 3,
+            "timestamp": "2023-11-21T12:30:00Z"
+          }
+        ],
+       
+
+        "externalLinks": [
+          {
+            "title": "Manufacturer's Website",
+            "url": "https://manufacturer.com/product-page"
+          },
+          {
+            "title": "Buy Now",
+            "url": "https://onlineshop.com/product"
+          }
+        ]
+      },
+      
+      { 
+        
+        "productName": "DJI Mavic Air 2",
+        "image": "https://ebook.projectbd.com/wp-content/uploads/2023/10/sony-4.jpg",
+        "tags": ["electronics", "gadgets", "tech"],
+        "category": "featured",
+        "type": "Gadget",
+        "timestamp": "2023-11-20T15:00:00Z",
+        "productDetails": "The DJI Mavic Air 2 is a compact and foldable drone equipped with advanced features for high-quality aerial photography and videography. It offers 4K video recording, intelligent shooting modes, and impressive flight performance.",
+        "upvote": [
+            {
+                "user": "user1",
+                "email": "user1@example.com",
+                "upvotedOn": "2023-11-22T10:30:00Z"
+              }
+        ],
+        "downvote": {
+          "user": "user2",
+          "email": "user2@example.com",
+          "downvotedOn": "2023-11-23T08:45:00Z"
+        },
+        "productOwner": "John Doe",
+        "reviews": [
+          {
+            "name": "Alice Brown",
+            "comment": "Excellent gadget! Really loved using it.",
+            "rating": 5,
+            "timestamp": "2023-11-20T15:00:00Z"
+          },
+          {
+            "name": "Michael Johnson",
+            "comment": "Not as good as expected.",
+            "rating": 3,
+            "timestamp": "2023-11-21T12:30:00Z"
+          }
+        ],
+       
+
+        "externalLinks": [
+          {
+            "title": "Manufacturer's Website",
+            "url": "https://manufacturer.com/product-page"
+          },
+          {
+            "title": "Buy Now",
+            "url": "https://onlineshop.com/product"
+          }
+        ]
+      }
+      
+      
+]
