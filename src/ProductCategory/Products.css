@@ -1,0 +1,42 @@
+/* Style the search box and button */
+.search-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 50px;
+
+  }
+
+.search-content input[type="text"],
+.search-content input{
+    width: 300px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 2px solid rgb(194, 194, 194);
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: -5px;
+
+}
+
+.search-content button {
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Style the search button */
+.search-content button {
+  background-color: #f20000; /* Adjust the button background color */
+  color: #fff; /* Adjust the button text color */
+  cursor: pointer;
+}
+
+/* Add hover effect to the button */
+.search-content button:hover {
+  background-color: #bc0208; /* Adjust the button hover background color */
+}

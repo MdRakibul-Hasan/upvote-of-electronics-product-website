@@ -86,11 +86,15 @@ const handleUpvote = () => {
         <div className="mx-auto">
 {/* try my own style cards
  */}
-<div className="card w-96 bg-base-100 shadow-xl">
-  <div className="w-full md:h-[60vh] overflow-hidden rounded-xl">
+<div className="card w-96 bg-base-100 shadow-xl md:w-[50vh]">
+  <div className="w-full md:h-[50vh] overflow-hidden rounded-xl">
     <img className="w-full object-cover" src={image} alt="Shoes" /></div>
   <div className="card-body flex-col justify-end flex-grow">
-  <Link to={`/techProduct/${_id}`}><h2 className="text-2xl font-bold">{productName}</h2></Link>
+  <Link to={`/techProduct/${_id}`}>
+  <h2 className="text-2xl font-bold">
+    {productName.length > 17 ? `${productName.substring(0, 17)}...` : productName}
+  </h2>
+</Link>
     {tags && tags.length > 0 && (
         <div className="flex">
           <h4>Tags:</h4>
@@ -138,28 +142,17 @@ const handleUpvote = () => {
 
   }
 
-
 </>
 
-
   }
-  
-
-  </>
+ </>
 }
-
-
-
-
 
     {/* <div className="card-actions justify-end">
     
     </div> */}
   </div>
 </div>
-
-        
- 
 
 
         </div>
@@ -169,38 +162,3 @@ const handleUpvote = () => {
 export default Cards;
 
 
-
-
-
-
-// {redirectToLogin ? (
-//   <Link to="/login"><button
-//   onClick={handleUpvote}
-//   className={`${
-//     voted || user?.email === OwnerEmail ? 'opacity-50 cursor-not-allowed' : ''
-//   }`}
-//   disabled={voted || user?.email === OwnerEmail}
-//   >
-//   <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
-//     <FaArrowUpFromBracket />
-//     {upvote.length}
-//   </h2>
-//   </button></Link>
-// ) : (
-  
-
-// <button
-// onClick={handleUpvote}
-// className={`${
-// voted || user?.email === OwnerEmail ? 'opacity-50 cursor-not-allowed' : ''
-// }`}
-// disabled={voted || user?.email === OwnerEmail}
-// >
-// <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
-// <FaArrowUpFromBracket />
-// {upvote.length}
-// </h2>
-// </button>
-
-//   )
-// }

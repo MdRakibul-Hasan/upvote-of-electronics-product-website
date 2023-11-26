@@ -14,14 +14,14 @@ const Footer = () => {
     
     <Link to="/login"><a className="link link-hover text-black">Login</a></Link> 
     <Link to="/register"><a className="link link-hover text-black">Register</a></Link> 
-    <Link to="/myCart"><a className="link link-hover text-black">My Cart</a></Link> 
+    {/* <Link to="/myCart"><a className="link link-hover text-black">My Cart</a></Link>  */}
     
   </nav> 
   <nav>
     <header className="footer-title text-black">Company</header> 
     <Link to="/about-us"><a className="link link-hover text-black">About us</a></Link> 
     {/* <Link to="/login"><a className="link link-hover text-white">Contact</a></Link>  */}
-    <Link to="/addProduct"><a className="link link-hover text-black">Add Product</a></Link> 
+    {/* <Link to="/addProduct"><a className="link link-hover text-black">Add Product</a></Link>  */}
     
   </nav> 
   <nav>

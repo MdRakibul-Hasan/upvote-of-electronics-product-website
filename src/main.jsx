@@ -18,14 +18,16 @@ import PrivacyPolicy from './Components/OptionalPage/PrivacyPolicy.jsx';
 import ErrorPage from './Components/Error/ErrorPage.jsx';
 import AddProduct from './Components/AddProduct.jsx';
 import UpdateProduct from './Components/UpdateProduct.jsx';
-import MyCart from './Components/MyCart.jsx';
-import Apple from './Components/Brand/Apple.jsx';
-import Google from './Components/Brand/Google.jsx';
-import Intel from './Components/Brand/Intel.jsx';
-import Samsung from './Components/Brand/Samsung.jsx';
-import Sony from './Components/Brand/Sony.jsx';
-import Lenovo from './Components/Brand/Lenovo.jsx';
+// import MyCart from './Components/MyCart.jsx';
+// import Apple from './Components/Brand/Apple.jsx';
+// import Google from './Components/Brand/Google.jsx';
+// import Intel from './Components/Brand/Intel.jsx';
+// import Samsung from './Components/Brand/Samsung.jsx';
+// import Sony from './Components/Brand/Sony.jsx';
+// import Lenovo from './Components/Brand/Lenovo.jsx';
 import ProductDetails from './Components/Home/ProductDetails.jsx';
+import Products from './ProductCategory/Products.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -46,55 +48,62 @@ const router = createBrowserRouter([
         loader: ({params})=>fetch(`http://localhost:5000/techProduct/${params.id}`),
         
       },
+      
+      {
+        path: '/products',
+        element: <Products></Products>,
+        loader: ()=>fetch('http://localhost:5000/techProduct'),
+        
+      },
 
-      {
-        path: '/Apple',
-        element: <Apple></Apple>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // {
+      //   path: '/Apple',
+      //   element: <Apple></Apple>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
-      {
-        path: '/Google',
-        element: <Google></Google>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // },
+      // {
+      //   path: '/Google',
+      //   element: <Google></Google>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
-      {
-        path: '/Intel',
-        element: <Intel></Intel>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // },
+      // {
+      //   path: '/Intel',
+      //   element: <Intel></Intel>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
-      {
-        path: '/Samsung',
-        element: <Samsung></Samsung>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // },
+      // {
+      //   path: '/Samsung',
+      //   element: <Samsung></Samsung>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
-      {
-        path: '/Sony',
-        element: <Sony></Sony>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // },
+      // {
+      //   path: '/Sony',
+      //   element: <Sony></Sony>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
-      {
-        path: '/Lenovo',
-        element: <Lenovo></Lenovo>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // },
+      // {
+      //   path: '/Lenovo',
+      //   element: <Lenovo></Lenovo>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
+      // },
       {
         path: '/addProduct',
         element: <ProtectedRoute> <AddProduct></AddProduct> </ProtectedRoute>,
         loader: ()=>fetch('/data.json'),
         
       },
-      {
-        path: '/myCart',
-        element: <ProtectedRoute> <MyCart></MyCart> </ProtectedRoute>,
-        loader: ()=>fetch('https://ass10server2.vercel.app/product'),
+      // {
+      //   path: '/myCart',
+      //   element: <ProtectedRoute> <MyCart></MyCart> </ProtectedRoute>,
+      //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
-      },
+      // },
       {
         path: '/updateProduct/:id',
         element: <ProtectedRoute><UpdateProduct></UpdateProduct></ProtectedRoute>,

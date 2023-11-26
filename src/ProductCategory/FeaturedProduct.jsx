@@ -22,7 +22,7 @@ const FeaturedProduct = () => {
                 <h2 className=" text-center text-3xl font-bold">Featured</h2>
             
             
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-3 gap-8">
                 {
                   sortedFeatured.map(item => <Cards
                   key={item._id}

@@ -62,7 +62,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
           <NavLink to="/" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Home</NavLink>
-          <NavLink to="/" className={({isActive, isPending}) =>
+          <NavLink to="/products" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Products</NavLink>
 
             {/* <NavLink to="/addProduct" className={({isActive, isPending}) =>
@@ -187,7 +187,7 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
         <NavLink to="/" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Home</NavLink>
 <br />
-            <NavLink to="/" className={({isActive, isPending}) =>
+            <NavLink to="/products" className={({isActive, isPending}) =>
 isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>Products</NavLink>
    <br />                     
             {/* <NavLink to="/myCart" className={({isActive, isPending}) =>
