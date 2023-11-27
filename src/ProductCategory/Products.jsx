@@ -3,17 +3,30 @@ import Cards from "../Components/Home/cards";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../Components/Services/AuthProvider";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import './Products.css';
 import { useEffect } from "react";
 
 const Products = () => {
   const {user,loading} = useContext(AuthContext);
-  const products = useLoaderData();
+//   const products = useLoaderData();
+const [products, setProducts] = useState([]);
 
 const [search,setSearch] = useState('');
 const [searchResults, setSearchResults] = useState([]);
+
+const [currentPage, setCurrentPage] = useState(0);
+
+// page loading by useeffect
+useEffect(() => {
+    fetch(`http://localhost:5000/techProduct?page=${currentPage}&size=${itemsPerPage}`)
+    .then(res => res.json())
+    .then(data => setProducts(data))
+},[currentPage]);
+
+
+
 
 // Total number of products
 const [productCount, setProductCount] = useState([]);
@@ -29,7 +42,7 @@ const pages = []
 for(let i = 0; i <numberOfPages; i++){
  pages.push(i)
 }
-console.log(pages);
+
 // my search bar
 
 const handleSearch = () => {
@@ -61,6 +74,18 @@ const handleSearch = () => {
       handleSearch();
     }
 };
+
+const handlePreviousPage = () => {
+    if (currentPage > 0){
+        setCurrentPage(currentPage - 1);
+    }
+}
+
+const handleNextPage = () => {
+    if(currentPage < pages.length -1){
+        setCurrentPage( currentPage + 1);
+    }
+ }
 
   return (
       <div><ToastContainer/>
@@ -105,9 +130,16 @@ const handleSearch = () => {
               <button className="btn btn-outline">See All Products</button></div> */}
           </section>
 <div className="pagination">
+    <button onClick={handlePreviousPage}>Previous</button>
+    
               {
-                pages.map(page => <button key={page}>{page}</button>)
+                pages.map(page => <button 
+                    className={currentPage === page ? 'selected' :
+                undefined}
+                    onClick={() => setCurrentPage(page)}
+                    key={page}>{page}</button>)
               }
+              <button onClick={handleNextPage}>Next</button>
 </div>
 
       </div>

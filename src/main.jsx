@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products></Products>,
-        loader: ()=>fetch('http://localhost:5000/techProduct'),
+        // loader: ()=>fetch('http://localhost:5000/techProduct'),
         
       },
 
