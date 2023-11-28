@@ -154,7 +154,7 @@ const router = createBrowserRouter([
       {
         path: 'myproduct',
         element: <MyProduct></MyProduct>,
-        
+        loader: ()=>fetch('http://localhost:5000/techProduct'),
       }
     ]
   }

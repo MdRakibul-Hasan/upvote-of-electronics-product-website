@@ -78,7 +78,7 @@ const OwnerEmail = form.OwnerEmail.value;
 const upvote = [{}];
 const productOwner = user?.displayName;
 const reviews = [{}];
-const type = "unverified"
+const type = "pending";
 const timestamp = new Date();
 console.log("tager value",tags2);
 

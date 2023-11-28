@@ -129,7 +129,7 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
     <h2 className="text-black text-sm text-center">No User</h2>
 
  } 
-        <Link to="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
+        <Link to="/dashboard/myprofile"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
         <MenuItem onClick={handleClose}>
         {
  user ? 
@@ -235,7 +235,7 @@ isPending ? "pending" : isActive ? "text-orange-600 font-bold" : "text-black"}>M
 
 {
   user?
-  <Link to="/dashboard"><button onClick={toggleMobileMenu}><h2 className="pb-2">Dashboard</h2></button></Link>
+  <Link to="/dashboard/myprofile"><button onClick={toggleMobileMenu}><h2 className="pb-2">Dashboard</h2></button></Link>
   : ""
 }
 <br />

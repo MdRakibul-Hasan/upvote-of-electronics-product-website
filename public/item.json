@@ -64,6 +64,7 @@
         "type": "Gadget",
         "timestamp": "2023-11-20T15:00:00Z",
         "productDetails": "Compact and wireless earbuds that offer high-quality sound and portability. These earbuds provide a seamless audio experience, allowing users to enjoy music or take calls without the hassle of tangled wires.",
+        "OwnerEmail": "user1@example.com",
         "upvote": [
             {
                 "user": "user1",
@@ -115,6 +116,7 @@
         "type": "Gadget",
         "timestamp": "2023-11-19T15:00:00Z",
         "productDetails": "Apple AirPods Pro is a set of wireless earbuds designed for premium sound quality and active noise cancellation. They offer a customizable fit, adaptive EQ, and transparency mode for ambient sound.",
+        "OwnerEmail": "user1@example.com",
         "upvote": [
             {
                 "user": "user1",
@@ -180,6 +182,7 @@
         "type": "Gadget",
         "timestamp": "2023-11-20T15:00:00Z",
         "productDetails": "The DJI Mavic Air 2 is a compact and foldable drone equipped with advanced features for high-quality aerial photography and videography. It offers 4K video recording, intelligent shooting modes, and impressive flight performance.",
+        "OwnerEmail": "user1@example.com",
         "upvote": [
             {
                 "user": "user1",

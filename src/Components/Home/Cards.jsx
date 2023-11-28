@@ -117,7 +117,7 @@ const handleUpvote = () => {
       >
       <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
         <FaArrowUpFromBracket />
-        {currentVote}
+        {currentVote -1}
       </h2>
       </button></Link> :
 
@@ -128,7 +128,7 @@ const handleUpvote = () => {
     >
     <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
       <FaArrowUpFromBracket />
-      {currentVote}
+      {currentVote -1}
     </h2>
     </button> : 
     <button
@@ -136,7 +136,7 @@ const handleUpvote = () => {
     >
     <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
       <FaArrowUpFromBracket />
-      {currentVote}
+      {currentVote -1}
     </h2>
     </button>
 
