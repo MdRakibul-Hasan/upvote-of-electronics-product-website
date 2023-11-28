@@ -59,7 +59,7 @@ const MyProduct = () => {
     return (
         <div>
             <h2 className=" text-2xl font-bold pb-10 ml-14 py-5">My Product</h2>
-            <table className="w-full px-5 max-md:px-2">
+            <table className="w-[95%] mx-auto">
       <thead className="font-bold">
         <tr>
           <th>Product Name</th>
@@ -76,7 +76,11 @@ const MyProduct = () => {
             <td className="text-center">{product.upvote.length -1}</td>
             <td className="text-center">{product.type}</td>
             <td className="text-center">
-              <button onClick={() => handleDelete(product._id)}>Delete</button>
+              <div className="flex justify-center items-center">
+              <button className="bg-red-500 hover:bg-red-700 flex justify-center
+              items-center align-middle px-4 py-2 rounded-md
+               text-sm font-medium w-[70%]" onClick={() => handleDelete(product._id)}>Delete</button>
+              </div>
             </td>
             <td className="text-center">
               <button>Update</button>
