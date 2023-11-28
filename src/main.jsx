@@ -16,7 +16,7 @@ import AboutUs from './Components/OptionalPage/AboutUs.jsx';
 import TermsAndConditions from './Components/OptionalPage/TermsAndConditions.jsx';
 import PrivacyPolicy from './Components/OptionalPage/PrivacyPolicy.jsx';
 import ErrorPage from './Components/Error/ErrorPage.jsx';
-import AddProduct from './Components/AddProduct.jsx';
+import AddProduct from './Components/Dashboard/AddProduct.jsx';
 import UpdateProduct from './Components/UpdateProduct.jsx';
 // import MyCart from './Components/MyCart.jsx';
 // import Apple from './Components/Brand/Apple.jsx';
@@ -27,6 +27,9 @@ import UpdateProduct from './Components/UpdateProduct.jsx';
 // import Lenovo from './Components/Brand/Lenovo.jsx';
 import ProductDetails from './Components/Home/ProductDetails.jsx';
 import Products from './ProductCategory/Products.jsx';
+import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import MyProfile from './Components/Dashboard/MyProfile.jsx';
+import MyProduct from './Components/Dashboard/MyProduct.jsx';
 
 
 const router = createBrowserRouter([
@@ -134,6 +137,27 @@ const router = createBrowserRouter([
 
     ]
   },
+  {
+    path: 'dashboard',
+    element : <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'myprofile',
+        element: <MyProfile></MyProfile>,
+
+      },
+      {
+        path: 'addproduct',
+        element: <AddProduct></AddProduct>,
+        
+      },
+      {
+        path: 'myproduct',
+        element: <MyProduct></MyProduct>,
+        
+      }
+    ]
+  }
 ]);
 
 

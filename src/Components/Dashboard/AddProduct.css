@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* Style for the tags container */
+.custom-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  /* Style for each individual tag */
+  .custom-tag {
+    background-color: #fd0202;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+  }
+  
+  /* Style for the tag remove button */
+  .custom-tag-remove {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+  div.react-tags__tags input {
+    width: 100%; /* Adjust the width as needed */
+  }
+ 
+  
