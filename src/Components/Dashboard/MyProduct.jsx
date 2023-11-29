@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Services/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -74,7 +74,10 @@ const MyProduct = () => {
         {storedProducts.map((product, index) => (
           <tr key={index} className=" hover:bg-slate-200">
             <td className="text-center">{index + 1}</td>
-            <td className="text-center">{product.productName}</td>
+           
+           <td className="text-center"><Link to={`/techProduct/${product._id}`}>
+            <h3 className="text-center font-semibold">{product.productName}
+           </h3></Link></td> 
             <td className="text-center">{product.upvote.length -1}</td>
             <td className="text-center">{product.type}</td>
             <td className="text-center">
@@ -86,9 +89,9 @@ const MyProduct = () => {
             </td>
             <td className="text-center">
               <div className="flex justify-center items-center">
-              <button className="bg-orange-500 hover:bg-orange-600 flex justify-center
+              <Link to={`/dashboard/updateproduct/${(product._id)}`}><button className="bg-orange-500 hover:bg-orange-600 flex justify-center
               items-center align-middle px-4 py-2 rounded-md text-white
-               text-sm font-medium w-[70%]">Update</button>
+               text-sm font-medium w-[95%]">Update</button></Link>
               </div>
             </td>
           </tr>

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { WithContext as ReactTags } from 'react-tag-input';
 import './AddProduct.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const mySuggestion = [
   { id: 'electronics', text: 'electronics' },
@@ -28,8 +28,14 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
 
 const UpdateProduct = () => {
+    const product = useLoaderData();
+    const {_id, productName, category, tags, type,
+        productDetails, image, OwnerEmail, upvote,
+        externalLinks} = product;
+
+
     const {loading, user} = useContext(AuthContext);
-    const [descriptionFrom, setDescriptionFrom] = useState("");
+    // const [descriptionFrom, setDescriptionFrom] = useState("");
     const navigate = useNavigate();
     
     const [tags2, setTags2] = React.useState([
@@ -63,7 +69,7 @@ const UpdateProduct = () => {
     
   
   
-  const handleAddProduct = event => {
+  const handleUpdateProduct = event => {
       event.preventDefault();
   
   
@@ -72,36 +78,33 @@ const UpdateProduct = () => {
   const productName = form.productName.value;
   const externalLinks = form.link.value;
   const category = form.option.value;
-  const productDetails = descriptionFrom;
+  const productDetails = form.productDetails.value;
   const image = form.image.value;
   const OwnerEmail = form.OwnerEmail.value;
-  const upvote = [{}];
   const productOwner = user?.displayName;
-  const reviews = [{}];
-  const type = "pending";
   const timestamp = new Date();
   console.log("tager value",tags2);
   
   const tagsStringArray = tags2.map(tag => tag.text);
   
   
-  const newProduct = {productName, externalLinks, tags: tagsStringArray, upvote, type, 
+  const updatedProduct = {productName, externalLinks, tags: tagsStringArray, 
     category, productDetails, image, OwnerEmail,
-    timestamp, productOwner, reviews}
-  console.log(newProduct);
+    timestamp, productOwner}
+  console.log(updatedProduct);
   
-  fetch('http://localhost:5000/techProduct', {
-      method: 'POST',
+  fetch(`http://localhost:5000/techProduct/${_id}`, {
+      method: 'PUT',
       headers: {
           'content-type' : 'application/json'
       },
-      body: JSON.stringify(newProduct)
+      body: JSON.stringify(updatedProduct)
   })
   .then(res=> res.json())
   .then(data =>{
       
-      if(data.insertedId){
-        const notify2 = () => toast.success('Product upload is Successful', {
+    if(data.modifiedCount > 0){
+        const notify2 = () => toast.success('Product successfully updated', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -115,7 +118,7 @@ const UpdateProduct = () => {
   
       setTimeout(() => {
         navigate('/dashboard/myproduct');
-      }, 3000);
+      }, 3500);
       
       }
     
@@ -124,9 +127,9 @@ const UpdateProduct = () => {
   }
     return (
         <div className="px-20 py-14"><ToastContainer />
-            <h2 className=" text-center font-bold text-2xl pb-10">Add product</h2>
+            <h2 className=" text-center font-bold text-2xl pb-10">Update product</h2>
 
-<form onSubmit={handleAddProduct}>
+<form onSubmit={handleUpdateProduct}>
 {/* product name and brand name */}
 <div className="md:flex">
 <div className="form-control md:w-1/2">
@@ -134,7 +137,9 @@ const UpdateProduct = () => {
     <span className="label-text block text-gray-700 text-sm font-bold">Product Name</span>
   </label>
   <label className="input-group ">
-    <input type="text" placeholder="Product Name" name="productName" 
+    <input type="text" placeholder="Product Name"
+    defaultValue={productName}
+    name="productName" 
     className="input input-bordered w-full" required />
   </label>
 </div>
@@ -143,7 +148,9 @@ const UpdateProduct = () => {
     <span className="label-text block text-gray-700 text-sm font-bold">External Link</span>
   </label>
   <label className="input-group">
-    <input type="text" placeholder="External Link" name="link"
+    <input type="text" placeholder="External Link"
+    defaultValue={externalLinks}
+    name="link"
     className="input input-bordered w-full" />
   </label>
 </div>
@@ -166,6 +173,7 @@ const UpdateProduct = () => {
                 className="form-radio"
                 name="option"
                 value="featured"
+                defaultChecked
               />
               <span className="ml-2">Featured</span>
             </label>
@@ -201,7 +209,9 @@ const UpdateProduct = () => {
 
                         <textarea
                             className="input input-bordered w-full"
-                            placeholder="Description" onChange={(e) => setDescriptionFrom(e.target.value)}
+                            defaultValue={productDetails}
+                            placeholder="Description"
+                            name="productDetails"
                             required rows={5}
                         />
 
@@ -216,7 +226,9 @@ const UpdateProduct = () => {
     <span className="label-text block text-gray-700 text-sm font-bold">Image</span>
   </label>
   <label className="input-group">
-    <input type="text" placeholder="Image link" name="image"
+    <input type="text" placeholder="Image link" 
+    defaultValue={image}
+    name="image"
     className="input input-bordered w-full" required />
   </label>
 </div>
@@ -284,7 +296,7 @@ const UpdateProduct = () => {
             </div>
 
 
-<input type="submit" value="Add Product" className="btn btn-block bg-slate-300 mt-4" />
+<input type="submit" value="Update Product" className="btn btn-block bg-slate-300 mt-4" />
 
 
 

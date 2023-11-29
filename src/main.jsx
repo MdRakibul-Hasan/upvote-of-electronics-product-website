@@ -17,7 +17,7 @@ import TermsAndConditions from './Components/OptionalPage/TermsAndConditions.jsx
 import PrivacyPolicy from './Components/OptionalPage/PrivacyPolicy.jsx';
 import ErrorPage from './Components/Error/ErrorPage.jsx';
 import AddProduct from './Components/Dashboard/AddProduct.jsx';
-import UpdateProduct from './Components/UpdateProduct.jsx';
+import UpdateProduct from './Components/Dashboard/UpdateProduct.jsx';
 // import MyCart from './Components/MyCart.jsx';
 // import Apple from './Components/Brand/Apple.jsx';
 // import Google from './Components/Brand/Google.jsx';
@@ -30,6 +30,7 @@ import Products from './ProductCategory/Products.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import MyProfile from './Components/Dashboard/MyProfile.jsx';
 import MyProduct from './Components/Dashboard/MyProduct.jsx';
+import Allusers from './Components/Dashboard/Allusers.jsx';
 
 
 const router = createBrowserRouter([
@@ -107,12 +108,12 @@ const router = createBrowserRouter([
       //   loader: ()=>fetch('https://ass10server2.vercel.app/product'),
         
       // },
-      {
-        path: '/updateProduct/:id',
-        element: <ProtectedRoute><UpdateProduct></UpdateProduct></ProtectedRoute>,
-        loader: ({params})=>fetch(`https://ass10server2.vercel.app/product/${params.id}`)
+      // {
+      //   path: '/updateProduct/:id',
+      //   element: <ProtectedRoute><UpdateProduct></UpdateProduct></ProtectedRoute>,
+      //   loader: ({params})=>fetch(`https://ass10server2.vercel.app/product/${params.id}`)
         
-      },
+      // },
 
       {
         path: '/login',
@@ -155,6 +156,19 @@ const router = createBrowserRouter([
         path: 'myproduct',
         element: <MyProduct></MyProduct>,
         loader: ()=>fetch('http://localhost:5000/techProduct'),
+      }
+      ,
+      {
+        path: 'updateproduct/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params})=>fetch(`http://localhost:5000/techProduct/${params.id}`),
+        
+      },
+      // admin dashboard
+      {
+        path: 'manageusers',
+        element: <Allusers></Allusers>,
+        loader: ()=>fetch('http://localhost:5000/users'),
       }
     ]
   }

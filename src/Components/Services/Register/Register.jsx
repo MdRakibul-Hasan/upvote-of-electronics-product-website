@@ -85,8 +85,34 @@ createUser(email, password, name, image)
             progress: undefined,
             theme: "light",
             });
-        console.log(result.user);
+        console.log(result);
         notify2();
+        const UserEmail = result?.email;
+        const UserName = name;
+        const role = "User";
+        const sendEmailAsUser = {name:UserName, email : UserEmail, role}
+     
+        // test
+fetch('http://localhost:5000/users', {
+    method: 'POST',
+    headers: {
+        'content-type' : 'application/json'
+    },
+    body: JSON.stringify(sendEmailAsUser)
+})
+.then(res=> res.json())
+.then(data =>{
+  console.log(data);
+})
+
+
+
+
+
+// test end
+
+
+
         navigate(location?.state ? location.state : '/login');
 
     })

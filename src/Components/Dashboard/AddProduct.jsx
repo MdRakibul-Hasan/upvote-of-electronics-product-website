@@ -167,6 +167,7 @@ fetch('http://localhost:5000/techProduct', {
                 className="form-radio"
                 name="option"
                 value="featured"
+                defaultChecked
               />
               <span className="ml-2">Featured</span>
             </label>

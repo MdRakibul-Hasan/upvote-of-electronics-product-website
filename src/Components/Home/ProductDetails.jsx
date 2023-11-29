@@ -224,7 +224,7 @@ const ProductDetails = () => {
     >
     <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
       <FaArrowUpFromBracket />
-      {currentVote}
+      {currentVote -1}
     </h2>
     </button> : 
     <button
@@ -232,7 +232,7 @@ const ProductDetails = () => {
     >
     <h2 className="bg-green-400 rounded-md px-2 py-1 flex items-center gap-1 w-[50px] justify-center">
       <FaArrowUpFromBracket />
-      {currentVote}
+      {currentVote -1}
     </h2>
     </button>
   }
@@ -250,9 +250,10 @@ const ProductDetails = () => {
             </div>
             {/* Review services */}
             <div className="flex flex-col gap-1 mx-4 mt-2 pb-10 md:mx-10">
-                <p className=" text-sm"><span className="font-bold text-lg">Review ({currentReview.length})</span></p>
+                <p className=" text-sm"><span className="font-bold text-lg">Review ({currentReview.length -1})</span></p>
                 <hr />
-                {currentReview.map((review, index) => (
+                {
+                 currentReview.length > 1  ? <>{currentReview.map((review, index) => (
                     <div key={index}>
                         {
                            (review.photoURL) ? <><img className="bg-white rounded-full w-[8vh]" src={review.photoURL} /> </> 
@@ -281,7 +282,10 @@ const ProductDetails = () => {
 
                         <hr />
                     </div>
-                ))}
+                ))}</>
+                   :
+                   <><h2 className=" text-base font-bold">No review yet</h2></>
+                }
 
 
             </div>

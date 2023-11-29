@@ -16,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const emailRef = useRef(null);
 
+
     const handleGoogleBtn = ()=>{
       handleGoogleSignIn()
          
@@ -31,7 +32,37 @@ const Login = () => {
     theme: "light",
     });
 console.log(result.user);
+
 notify2();
+
+const UserEmail = result.user?.email;
+        const UserName = result.user?.displayName;
+        const role = "User";
+        const sendEmailAsUser = {name:UserName, email : UserEmail, role}
+        console.log(UserName);
+        // test
+fetch('http://localhost:5000/users', {
+    method: 'POST',
+    headers: {
+        'content-type' : 'application/json'
+    },
+    body: JSON.stringify(sendEmailAsUser)
+})
+.then(res=> res.json())
+.then(data =>{
+  console.log(data);
+})
+
+
+
+
+
+
+
+
+
+
+
 navigate(location?.state ? location.state : '/');
    })
 
