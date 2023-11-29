@@ -62,6 +62,7 @@ const MyProduct = () => {
             <table className="w-[95%] mx-auto">
       <thead className="font-bold">
         <tr>
+        <th>SL.</th>
           <th>Product Name</th>
           <th>Number of Votes</th>
           <th>Status</th>
@@ -72,25 +73,33 @@ const MyProduct = () => {
       <tbody>
         {storedProducts.map((product, index) => (
           <tr key={index} className=" hover:bg-slate-200">
+            <td className="text-center">{index + 1}</td>
             <td className="text-center">{product.productName}</td>
             <td className="text-center">{product.upvote.length -1}</td>
             <td className="text-center">{product.type}</td>
             <td className="text-center">
               <div className="flex justify-center items-center">
               <button className="bg-red-500 hover:bg-red-700 flex justify-center
-              items-center align-middle px-4 py-2 rounded-md
+              items-center align-middle px-4 py-2 rounded-md text-white
                text-sm font-medium w-[70%]" onClick={() => handleDelete(product._id)}>Delete</button>
               </div>
             </td>
             <td className="text-center">
-              <button>Update</button>
+              <div className="flex justify-center items-center">
+              <button className="bg-orange-500 hover:bg-orange-600 flex justify-center
+              items-center align-middle px-4 py-2 rounded-md text-white
+               text-sm font-medium w-[70%]">Update</button>
+              </div>
             </td>
           </tr>
         ))}
       </tbody>
     </table>
 
-
+{
+    storedProducts.length == 0 ? <h2 className="pt-20 text-center font-bold">You have no product available now</h2>
+    : ""
+}
 
 
         </div>
