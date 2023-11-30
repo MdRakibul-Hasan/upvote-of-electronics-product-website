@@ -31,6 +31,7 @@ import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import MyProfile from './Components/Dashboard/MyProfile.jsx';
 import MyProduct from './Components/Dashboard/MyProduct.jsx';
 import Allusers from './Components/Dashboard/Allusers.jsx';
+import ProductReviewQueue from './Components/Dashboard/ProductReviewQueue.jsx';
 
 
 const router = createBrowserRouter([
@@ -169,7 +170,13 @@ const router = createBrowserRouter([
         path: 'manageusers',
         element: <Allusers></Allusers>,
         loader: ()=>fetch('http://localhost:5000/users'),
-      }
+      },
+      // moderator dashboard
+      {
+        path: 'productstatus',
+        element: <ProductReviewQueue></ProductReviewQueue>,
+        loader: ()=>fetch('http://localhost:5000/techProduct'),
+      },
     ]
   }
 ]);

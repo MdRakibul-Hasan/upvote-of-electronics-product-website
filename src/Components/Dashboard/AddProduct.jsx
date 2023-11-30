@@ -160,18 +160,7 @@ fetch('http://localhost:5000/techProduct', {
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Type:
           </label>
-          <div className="mb-2">
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                className="form-radio"
-                name="option"
-                value="featured"
-                defaultChecked
-              />
-              <span className="ml-2">Featured</span>
-            </label>
-          </div>
+
           <div className="mb-2">
             <label className="inline-flex items-center">
               <input
@@ -179,7 +168,7 @@ fetch('http://localhost:5000/techProduct', {
                 className="form-radio"
                 name="option"
                 value="trending"
-
+                defaultChecked
               />
               <span className="ml-2">Trending</span>
             </label>

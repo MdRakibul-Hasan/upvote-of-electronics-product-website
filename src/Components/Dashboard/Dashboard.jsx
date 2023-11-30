@@ -46,6 +46,8 @@ console.log("dekhi",currentUser);
         case 'User':
           return (
             <div key={user._id}>
+                <h2 className=" text-xl font-bold text-white
+                ml-5 py-5">User</h2>
      <ul className="menu text-white font-semibold">
     <li><NavLink to="/dashboard/myprofile">My Profile
         </NavLink></li>
@@ -63,20 +65,27 @@ console.log("dekhi",currentUser);
         case 'Moderator':
           return (
             <div key={user._id}>
-              {/* Moderator-specific menu */}
-              {/* Render your Moderator menu options here */}
+                <h2 className=" text-xl font-bold text-white
+                ml-5 py-5">Moderator</h2>
+
+<ul className="menu text-white font-semibold">
+    <li><NavLink to="/dashboard/productstatus">Product Review Queue
+        </NavLink></li>
+        <li><NavLink to="/dashboard/addproduct">Reported Contents
+        </NavLink></li>
+        <div className="divider"></div>
+        <li><NavLink to="/">Home
+        </NavLink></li>
+        </ul>       
+
             </div>
           );
         case 'Admin':
           return (
             <div key={user._id}>
+                <h2 className=" text-xl font-bold text-white
+                ml-5 py-5">Admin</h2>
     <ul className="menu text-white font-semibold">
-    <li><NavLink to="/dashboard/myprofile">My Profile
-        </NavLink></li>
-        <li><NavLink to="/dashboard/addproduct">Add Product
-        </NavLink></li>
-        <li><NavLink to="/dashboard/myproduct">My Product
-        </NavLink></li>
         <div className="divider"></div>
         <li><NavLink to="/">Home
         </NavLink></li>
