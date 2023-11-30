@@ -5,7 +5,7 @@ const useProductItems = () =>{
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('https://ass12-crud-server1.vercel.app/techProduct')
+        fetch('http://localhost:5000/techProduct')
         .then(res => res.json ())
         .then(data => {
             setItem(data);

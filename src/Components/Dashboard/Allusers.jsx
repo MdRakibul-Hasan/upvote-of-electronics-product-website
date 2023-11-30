@@ -16,7 +16,7 @@ const role = selectedRole;
 
 const updatedUser = {role}
 
-fetch(`https://ass12-crud-server1.vercel.app/users/${user._id}`, {
+fetch(`http://localhost:5000/users/${user._id}`, {
     method: 'PUT',
     headers: {
         'content-type' : 'application/json'
@@ -39,7 +39,7 @@ fetch(`https://ass12-crud-server1.vercel.app/users/${user._id}`, {
         });
     notify2();
     
-    fetch('https://ass12-crud-server1.vercel.app/users')
+    fetch('http://localhost:5000/users')
     .then((res) => res.json())
     .then((updatedUserData) => {
       // Set the fetched updated user data to the state
@@ -70,7 +70,7 @@ fetch(`https://ass12-crud-server1.vercel.app/users/${user._id}`, {
           }).then((result) => {
             if (result.isConfirmed) {
     
-              fetch(`https://ass12-crud-server1.vercel.app/users/${id}`,{
+              fetch(`http://localhost:5000/users/${id}`,{
                 method: 'DELETE'
               })
               .then(res=> res.json())

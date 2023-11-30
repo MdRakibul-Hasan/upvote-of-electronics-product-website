@@ -12,7 +12,7 @@ const Dashboard = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('https://ass12-crud-server1.vercel.app/users');
+          const response = await fetch('http://localhost:5000/users');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
@@ -34,7 +34,7 @@ useEffect(() => {
     setCurrentUser(filteredUser);   
   }
 }, [adminData, specificUserEmail]);
-console.log("dekhi",currentUser);
+
 
 
     return (

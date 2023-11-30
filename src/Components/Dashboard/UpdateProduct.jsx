@@ -83,17 +83,18 @@ const UpdateProduct = () => {
   const OwnerEmail = form.OwnerEmail.value;
   const productOwner = user?.displayName;
   const timestamp = new Date();
+  const type = "pending"
   console.log("tager value",tags2);
   
   const tagsStringArray = tags2.map(tag => tag.text);
   
   
   const updatedProduct = {productName, externalLinks, tags: tagsStringArray, 
-    category, productDetails, image, OwnerEmail,
+    category, productDetails, image, OwnerEmail, type,
     timestamp, productOwner}
   console.log(updatedProduct);
   
-  fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
+  fetch(`http://localhost:5000/techProduct/${_id}`, {
       method: 'PUT',
       headers: {
           'content-type' : 'application/json'

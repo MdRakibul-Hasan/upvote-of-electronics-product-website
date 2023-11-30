@@ -50,14 +50,14 @@ const router = createBrowserRouter([
       {
         path: '/techProduct/:id',
         element: <ProtectedRoute> <ProductDetails></ProductDetails></ProtectedRoute>,
-        loader: ({params})=>fetch(`https://ass12-crud-server1.vercel.app/techProduct/${params.id}`),
+        loader: ({params})=>fetch(`http://localhost:5000/techProduct/${params.id}`),
         
       },
       
       {
         path: '/products',
         element: <Products></Products>,
-        // loader: ()=>fetch('https://ass12-crud-server1.vercel.app/techProduct'),
+        // loader: ()=>fetch('http://localhost:5000/techProduct'),
         
       },
 
@@ -156,26 +156,26 @@ const router = createBrowserRouter([
       {
         path: 'myproduct',
         element: <MyProduct></MyProduct>,
-        loader: ()=>fetch('https://ass12-crud-server1.vercel.app/techProduct'),
+        loader: ()=>fetch('http://localhost:5000/techProduct'),
       }
       ,
       {
         path: 'updateproduct/:id',
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({params})=>fetch(`https://ass12-crud-server1.vercel.app/techProduct/${params.id}`),
+        loader: ({params})=>fetch(`http://localhost:5000/techProduct/${params.id}`),
         
       },
       // admin dashboard
       {
         path: 'manageusers',
         element: <Allusers></Allusers>,
-        loader: ()=>fetch('https://ass12-crud-server1.vercel.app/users'),
+        loader: ()=>fetch('http://localhost:5000/users'),
       },
       // moderator dashboard
       {
         path: 'productstatus',
         element: <ProductReviewQueue></ProductReviewQueue>,
-        loader: ()=>fetch('https://ass12-crud-server1.vercel.app/techProduct'),
+        loader: ()=>fetch('http://localhost:5000/techProduct'),
       },
     ]
   }

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Cards from "../Components/Home/cards";
 import useProductItems from "../hooks/useProductItems";
 import { AuthContext } from "../Components/Services/AuthProvider";
+import { Link } from "react-router-dom";
 
 const TrendingProduct = () => {
 
@@ -23,7 +24,7 @@ const TrendingProduct = () => {
                 <h2 className=" text-center text-3xl font-bold">Trending</h2>
             
             
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-3 gap-8">
                 {
                   sortedTrend.map(item => <Cards
                   key={item._id}
@@ -34,7 +35,7 @@ const TrendingProduct = () => {
                 }
             </div>
             <div className="mx-auto text-center mt-10">
-                <button className="btn btn-outline">See All Products</button></div>
+                <Link to="/products"><button className="btn btn-outline">See All Products</button></Link></div>
             </section>
         </div>
     );

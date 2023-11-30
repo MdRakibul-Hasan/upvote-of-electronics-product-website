@@ -41,7 +41,7 @@ const UserEmail = result.user?.email;
         const sendEmailAsUser = {name:UserName, email : UserEmail, role}
         console.log(UserName);
         // test
-fetch('https://ass12-crud-server1.vercel.app/users', {
+fetch('http://localhost:5000/users', {
     method: 'POST',
     headers: {
         'content-type' : 'application/json'

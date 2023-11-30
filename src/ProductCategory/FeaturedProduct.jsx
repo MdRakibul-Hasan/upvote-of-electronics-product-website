@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Cards from "../Components/Home/cards";
 import useProductItems from "../hooks/useProductItems";
 import { AuthContext } from "../Components/Services/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const FeaturedProduct = () => {
@@ -33,7 +34,7 @@ const FeaturedProduct = () => {
                 }
             </div>
             <div className="mx-auto text-center mt-10">
-                <button className="btn btn-outline">See All Products</button></div>
+                <Link to="/products"><button className="btn btn-outline">See All Products</button></Link></div>
             </section>
         </div>
     );
