@@ -20,7 +20,7 @@ const [currentPage, setCurrentPage] = useState(0);
 
 // page loading by useeffect
 useEffect(() => {
-    fetch(`http://localhost:5000/techProduct?page=${currentPage}&size=${itemsPerPage}`)
+    fetch(`https://ass12-crud-server1.vercel.app/techProduct?page=${currentPage}&size=${itemsPerPage}`)
     .then(res => res.json())
     .then(data => setProducts(data))
 },[currentPage]);
@@ -31,7 +31,7 @@ useEffect(() => {
 // Total number of products
 const [productCount, setProductCount] = useState([]);
 useEffect(() => {
-    fetch('http://localhost:5000/productsCount')
+    fetch('https://ass12-crud-server1.vercel.app/productsCount')
     .then(res => res.json())
     .then(data => setProductCount(data.count))
 }, []);

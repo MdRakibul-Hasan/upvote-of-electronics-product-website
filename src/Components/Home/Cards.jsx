@@ -21,7 +21,7 @@ const handleUpvote = () => {
   if (!hasUpvoted) {
     const updatedUpvotes = { user: user?.displayName, email: user?.email };
 
-    fetch(`http://localhost:5000/techProduct/${_id}`, {
+    fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const handleUpvote = () => {
          // Update with the fetched upvote data
          Swal.fire('Thank you', 'Upvote Successfully done', 'success');
         // Fetch the latest upvote data separately
-        fetch(`http://localhost:5000/techProduct/${_id}`, {
+        fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'

@@ -42,7 +42,7 @@ const ProductDetails = () => {
           };
         console.log(reviewData);
 
-        fetch(`http://localhost:5000/techProduct/${id}/addReview`,{
+        fetch(`https://ass12-crud-server1.vercel.app/techProduct/${id}/addReview`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ const ProductDetails = () => {
             })
             .then(() => {
                 // After successfully adding the review, fetch the updated reviews separately
-                fetch(`http://localhost:5000/techProduct/${id}`, {
+                fetch(`https://ass12-crud-server1.vercel.app/techProduct/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const ProductDetails = () => {
         if (!hasUpvoted) {
           const updatedUpvotes = { user: user?.displayName, email: user?.email };
       
-          fetch(`http://localhost:5000/techProduct/${_id}`, {
+          fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -117,7 +117,7 @@ const ProductDetails = () => {
                // Update with the fetched upvote data
                Swal.fire('Thank you', 'Upvote Successfully done', 'success');
               // Fetch the latest upvote data separately
-              fetch(`http://localhost:5000/techProduct/${_id}`, {
+              fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json'
@@ -250,7 +250,11 @@ const ProductDetails = () => {
             </div>
             {/* Review services */}
             <div className="flex flex-col gap-1 mx-4 mt-2 pb-10 md:mx-10">
-                <p className=" text-sm"><span className="font-bold text-lg">Review ({currentReview.length -1})</span></p>
+                {
+                  currentReview.length == 1 ? <p className=" text-sm"><span className="font-bold text-lg">Review (0)</span></p>
+                  :
+                  <p className=" text-sm"><span className="font-bold text-lg">Review ({currentReview.length})</span></p>
+                }
                 <hr />
                 {
                  currentReview.length > 1  ? <>{currentReview.map((review, index) => (

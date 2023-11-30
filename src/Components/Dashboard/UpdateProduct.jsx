@@ -93,7 +93,7 @@ const UpdateProduct = () => {
     timestamp, productOwner}
   console.log(updatedProduct);
   
-  fetch(`http://localhost:5000/techProduct/${_id}`, {
+  fetch(`https://ass12-crud-server1.vercel.app/techProduct/${_id}`, {
       method: 'PUT',
       headers: {
           'content-type' : 'application/json'

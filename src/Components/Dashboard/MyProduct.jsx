@@ -32,7 +32,7 @@ const MyProduct = () => {
           }).then((result) => {
             if (result.isConfirmed) {
     
-              fetch(`http://localhost:5000/techProduct/${id}`,{
+              fetch(`https://ass12-crud-server1.vercel.app/techProduct/${id}`,{
                 method: 'DELETE'
               })
               .then(res=> res.json())

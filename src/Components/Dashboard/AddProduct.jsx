@@ -90,7 +90,7 @@ const newProduct = {productName, externalLinks, tags: tagsStringArray, upvote, t
   timestamp, productOwner, reviews}
 console.log(newProduct);
 
-fetch('http://localhost:5000/techProduct', {
+fetch('https://ass12-crud-server1.vercel.app/techProduct', {
     method: 'POST',
     headers: {
         'content-type' : 'application/json'

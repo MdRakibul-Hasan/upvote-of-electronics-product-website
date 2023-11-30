@@ -30,7 +30,7 @@ const ProductReviewQueue = () => {
                 category,timestamp, productDetails, image, OwnerEmail, productOwner}
               console.log(updatedProduct);
            
-              fetch(`http://localhost:5000/techProduct/${id}`, {
+              fetch(`https://ass12-crud-server1.vercel.app/techProduct/${id}`, {
                   method: 'PUT',
                   headers: {
                       'content-type' : 'application/json'
@@ -50,7 +50,7 @@ const ProductReviewQueue = () => {
                       theme: "light",
                       });
                   notify2();
-                  fetch('http://localhost:5000/techProduct')
+                  fetch('https://ass12-crud-server1.vercel.app/techProduct')
                   .then((res) => res.json())
                   .then((updatedUserData) => {
                     setProductStatusNow(updatedUserData);
@@ -63,58 +63,6 @@ const ProductReviewQueue = () => {
                   }
                 
 
-      
-      
-
-
-
-    // const {_id, productName, category, tags, type,
-    //     productDetails, image, OwnerEmail, upvote,productOwner,
-    //     externalLinks} = pendingProducts;
-
-    // const handleMakeFeatured = (id) => {
-    //     const category = "featured";
-    //     const updatedProduct = { category };
-      
-    //     fetch(`http://localhost:5000/techProduct/${id}/addCategory`, {
-    //       method: 'POST',
-    //       headers: {
-    //         'content-type': 'application/json'
-    //       },
-    //       body: JSON.stringify(updatedProduct)
-    //     })
-    //       .then(res => {
-    //         if (!res.ok) {
-    //           throw new Error('Network response was not ok');
-    //         }
-    //         return res.json();
-    //       })
-    //       .then(data => {
-    //         if (data.modifiedCount > 0) {
-    //           const notify2 = () => toast.success('This product is a featured product now', {
-    //             // Toast configuration
-    //           });
-    //           notify2();
-      
-            //   fetch('http://localhost:5000/techProduct')
-            //     .then((res) => res.json())
-            //     .then((updatedUserData) => {
-            //       setProductStatusNow(updatedUserData);
-            //     })
-            //     .catch(error => {
-            //       console.error('Error:', error);
-            //       // Handle the fetch error
-            //     });
-            
-          
-        //   .catch(error => {
-        //     console.error('Error:', error);
-        //     // Handle the fetch error
-        //   });
-    //   };
-    
-    
-    
     
     
     
@@ -162,7 +110,7 @@ const ProductReviewQueue = () => {
           <div className="flex justify-center items-center">
           <button className="bg-red-500 hover:bg-red-700 flex justify-center
           items-center align-middle px-4 py-2 rounded-md text-white
-           text-sm font-medium w-[70%]" onClick={() => handleDelete(product._id)}>Delete</button>
+           text-sm font-medium w-[70%]" >Delete</button>
           </div>
         </td>
         <td className="text-center">

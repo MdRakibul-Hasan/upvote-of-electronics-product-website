@@ -93,7 +93,7 @@ createUser(email, password, name, image)
         const sendEmailAsUser = {name:UserName, email : UserEmail, role}
      
         // test
-fetch('http://localhost:5000/users', {
+fetch('https://ass12-crud-server1.vercel.app/users', {
     method: 'POST',
     headers: {
         'content-type' : 'application/json'
