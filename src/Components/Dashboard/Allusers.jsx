@@ -131,21 +131,22 @@ fetch(`http://localhost:5000/users/${user._id}`, {
               className="select select-xs w-[98px]"
               
               onChange={(e) => setSelectedRole(e.target.value)}
-              disabled={user?.role === 'admin'}
+            //   disabled={user?.role === 'admin'}
             >
               <option selected value="Moderator">Moderator</option>
+              <option value="Admin">Admin</option>
               <option value="User">User</option>
             </select>
             </td>
             <td className="text-center">
               <div className="flex justify-center items-center">
               <button className={`${
-                    user?.role === 'admin'
+                    user?.role === 'adminsdg'
                       ? 'opacity-50 cursor-not-allowed'
                       : ''
                   } bg-red-500 hover:bg-red-700 flex justify-center items-center align-middle px-4 py-2 rounded-md text-white text-sm font-medium w-[70%]`}
                   onClick={() => handleUpdateClick(user, user._id)}
-                  disabled={user?.role === 'admin'}
+                //   disabled={user?.role === 'admin'}
                  > Update
                 </button>
               </div>
@@ -156,7 +157,7 @@ fetch(`http://localhost:5000/users/${user._id}`, {
 
                 <button
                   className={`${
-                    user?.role === 'admin'
+                    user?.role === 'admindfgs'
                       ? 'opacity-50 cursor-not-allowed'
                       : ''
                   } bg-red-500 hover:bg-red-700 flex justify-center items-center align-middle px-4 py-2 rounded-md text-white text-sm font-medium w-[70%]`}
